@@ -41,7 +41,7 @@ namespace stats {
 // PrometheusExporter is thread-safe.
 class PrometheusExporter final : public ::prometheus::Collectable {
  public:
-  std::vector<prometheus::MetricFamily> Collect() const override;
+  virtual std::vector<prometheus::MetricFamily> Collect() const override;
 };
 
 }  // namespace stats
