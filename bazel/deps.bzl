@@ -20,12 +20,13 @@ def opencensus_cpp_deps():
     )
 
     # gRPC
-    maybe(
-        http_archive,
-        name = "com_github_grpc_grpc",
-        strip_prefix = "grpc-master",
-        urls = ["https://github.com/grpc/grpc/archive/master.tar.gz"],
-    )
+    # maybe(
+    #     http_archive,
+    #     name = "com_github_grpc_grpc",
+    #     strip_prefix = "grpc-master",
+    #     urls = ["https://github.com/grpc/grpc/archive/refs/tags/v1.25.0.tar.gz"],
+    #     #urls = ["https://github.com/grpc/grpc/archive/master.tar.gz"],
+    # )
 
     # Prometheus client library - used by Prometheus exporter.
     maybe(
