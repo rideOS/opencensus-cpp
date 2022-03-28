@@ -137,8 +137,7 @@ void SetMetricFamily(const opencensus::stats::ViewDescriptor& descriptor,
   const prometheus::MetricType type =
       MetricType(descriptor.aggregation().type());
   // TODO(sturdy): convert common units into base units (e.g. ms->s).
-  metric_family->name = SanitizeName(absl::StrCat(
-      descriptor.name(), "_", descriptor.measure_descriptor().units()));
+  metric_family->name = SanitizeName(absl::StrCat(descriptor.name()));
   metric_family->help = descriptor.description();
   metric_family->type = type;
 
